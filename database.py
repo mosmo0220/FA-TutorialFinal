@@ -8,7 +8,7 @@ DATABASE_LINK = config("DATABASE_LINK")
 SQLALCHEMY_DATABASE_URL = DATABASE_LINK
 
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+    SQLALCHEMY_DATABASE_URL
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
